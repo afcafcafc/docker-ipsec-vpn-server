@@ -7,8 +7,8 @@
 # Attribution required: please include my name in any derivative and let me
 # know how you have improved it!
 
-FROM debian:bookworm-slim
-
+#FROM debian:bookworm-slim
+FROM ubuntu:20.04
 ENV SWAN_VER=5.2
 WORKDIR /opt/src
 
