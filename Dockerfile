@@ -8,7 +8,7 @@
 # know how you have improved it!
 
 #FROM debian:bookworm-slim
-FROM ubuntu:20.04
+FROM debian:bookworm-slim
 ENV SWAN_VER=5.2
 WORKDIR /opt/src
 
