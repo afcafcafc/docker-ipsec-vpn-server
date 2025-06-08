@@ -18,13 +18,17 @@ Use this command to set up an IPsec VPN server on Docker:
 
 ```
 docker run \
+   -it \
     --name ipsec-vpn-server \
+    --env-file ./vpn.env \
     --restart=always \
     -v ikev2-vpn-data:/etc/ipsec.d \
     -v /lib/modules:/lib/modules:ro \
     -p 500:500/udp \
     -p 4500:4500/udp \
+    -p 1701:1701/udp \
     -d --privileged \
+    --entrypoint /bin/bash \
     hwdsl2/ipsec-vpn-server
 ```
 
